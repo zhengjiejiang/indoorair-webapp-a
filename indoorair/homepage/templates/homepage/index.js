@@ -14,6 +14,10 @@ function onLoginClick(){
   window.location.href = "/login";
 }
 
+function onDashboardClick(){
+  window.location.href = "/dashboard";
+}
+
 function onVersionClick(){
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {

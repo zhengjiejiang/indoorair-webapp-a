@@ -80,3 +80,11 @@ def post_register_api(request):
             "was_registered": False,
             "reason": str(e)
        })
+
+
+def post_logout_api(request):
+    logout(request)
+    return JsonResponse({
+         "was_successful": True,
+         "reason": None,
+    })

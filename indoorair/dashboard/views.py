@@ -3,14 +3,22 @@ from django.shortcuts import render
 
 
 def dashboard_page(request):
-    user = request.user
-    print("THE USER IS", user)
+  return render(request, "dashboard/dashboard.html",{},)
 
-    if user.is_authenticated == False:
-        return HttpResponse("Cannot view page - you must log in first!")
+def dashboard_api(request):
 
-    context = {
-        'user': user,
-    }
+  temp_avg = request.POST.get("temp_avg")
+  press_avg = request.POST.get("press_avg")
+  co2_avg = request.POST.get("co2_avg")
+  tvoc_avg = request.POST.get("tvoc_avg")
+  humid_avg = request.POST.get("humid_avg")
+  # This is for debugging purposes only.
 
-    return render(request, "dashboard/dashboard.html", context)
+  return JsonResponse({
+       "temp_avg": temp_avg,
+       "press_avg": press_avg,
+       "co2_avg": co2_avg,
+       "tvoc_avg": tvoc_avg,
+       "humid_avg": humid_avg,
+
+  })

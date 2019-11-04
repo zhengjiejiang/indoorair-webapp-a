@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'aprofile.apps.AprofileConfig',
+    'instrument.apps.InstrumentConfig',
     'foundations.apps.FoundationsConfig',
     'dashboard.apps.DashboardConfig',
     'gateway.apps.GatewayConfig',
