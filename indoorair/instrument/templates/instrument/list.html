@@ -1,17 +1,21 @@
+<!-- homepage/index.html -->
 <!DOCTYPE html>
 <html>
-<h2>List All the data </h2>
+<head>
+<title> Instruments</title>
+</head>
 <body>
-  <script>
-  {% include "instrument/function.js" %}
-  </script>
+    <script>
+        {% include "instrument/list.js" %}
+    </script>
 
-
-
-  <p>
-    <button type = button onclick = "onListClick();">Get the List</button>
-  </p>
-
+    <h1>Instruments List</h1>
+    <p>
+        <button type="button" onclick="onCreateClick()">Create Instrument</button>
+    </p>
+    <p>
+        <button type="button" onclick="onBackClick()">Back</button>
+    </p>
 
 </body>
 </html>

@@ -8,6 +8,8 @@ urlpatterns = [
     path('', include('homepage.urls')),
     path('',include('gateway.urls')),
     path('',include('dashboard.urls')),
-    path('',include('foundations.urls')),
+    path('',include('aprofile.urls')),
+    path('',include('instrument.urls')),
+
 
 ]
